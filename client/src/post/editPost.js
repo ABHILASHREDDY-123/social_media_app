@@ -182,7 +182,7 @@ class EditPost extends Component{
           <Navigate to={`/`}/>
         )
       }
-     const photoUrl = _id? `${process.env.REACT_APP_API_URL}/post/photo/${_id}?${new Date().getTime()}` : "";
+     const photoUrl = _id? `${process.env.REACT_APP_API_URL}/preload/post/photo/${_id}?${new Date().getTime()}` : "";
      let postx = defaultPost0;
      if(x==='1'){
        postx=defaultPost1;

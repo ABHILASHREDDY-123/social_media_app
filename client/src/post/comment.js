@@ -62,7 +62,7 @@ class Comment extends Component{
         this.setState({text:event.target.value,error:""});
      }
     render(){
-              const userPhotourl = isAuthenticated()?`${process.env.REACT_APP_API_URL}/user/photo/${isAuthenticated().user._id}`:"";
+              const userPhotourl = isAuthenticated()?`${process.env.REACT_APP_API_URL}/preload/user/photo/${isAuthenticated().user._id}`:"";
               let comments = this.props.comments.reverse();
            const {error} = this.state;
 
@@ -115,7 +115,7 @@ class Comment extends Component{
                                 
                                 style={{marginRight:"10px",borderRadius:"50%",
                                 marginBottom:"1rem",border:"2px solid black"}}
-                                src={comment.postedBy?`${process.env.REACT_APP_API_URL}/user/photo/${comment.postedBy._id}`:""}
+                                src={comment.postedBy?`${process.env.REACT_APP_API_URL}/preload/user/photo/${comment.postedBy._id}`:""}
                                 alt={"Unknown"}
                                 onError={i=>i.target.src=`${DefaultProfile}`}
 

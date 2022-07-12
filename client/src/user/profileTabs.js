@@ -22,7 +22,7 @@ class ProfileTabs extends Component{
                                 
                                 style={{marginRight:"10px",borderRadius:"50%",
                                 marginBottom:"1rem",border:"2px solid black"}}
-                                src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                                src={`${process.env.REACT_APP_API_URL}/preload/user/photo/${person._id}`}
                                 alt={person.name}
                                 onError={i=>i.target.src=`${DefaultProfile}`}
 
@@ -54,7 +54,7 @@ class ProfileTabs extends Component{
                                 
                                 style={{marginRight:"10px",borderRadius:"50%",
                                 marginBottom:"1rem",border:"2px solid black"}}
-                                src={`${process.env.REACT_APP_API_URL}/user/photo/${person._id}`}
+                                src={`${process.env.REACT_APP_API_URL}/preload/user/photo/${person._id}`}
                                 alt={person.name}
                                 onError={i=>i.target.src=`${DefaultProfile}`}
 
@@ -87,7 +87,7 @@ class ProfileTabs extends Component{
                                 
                                 style={{marginRight:"10px",borderRadius:"50%",
                                 marginBottom:"1rem",border:"2px solid black"}}
-                                src={`${process.env.REACT_APP_API_URL}/post/photo/${post._id}`}
+                                src={`${process.env.REACT_APP_API_URL}/preload/post/photo/${post._id}`}
                                 alt={post.title}
                                 onError={i=>i.target.src=`${defaultPost0}`}
 

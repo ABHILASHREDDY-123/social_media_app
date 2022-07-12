@@ -112,7 +112,7 @@ class Profile extends Component{
                 </div>
         }  
      
-        const photoUrl =  `${process.env.REACT_APP_API_URL}/user/photo/${_id}`;
+        const photoUrl =  `${process.env.REACT_APP_API_URL}/preload/user/photo/${_id}`;
     return (
         <div className="container" style={{color:"white"}}>
             <h1 className="mt-5 ml-5">Profile</h1>

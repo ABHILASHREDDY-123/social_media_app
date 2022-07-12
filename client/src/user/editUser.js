@@ -175,7 +175,7 @@ class EditUser extends Component{
           <Navigate to={`/user/${_id}`}/>
         )
       }
-     const photoUrl = _id? `${process.env.REACT_APP_API_URL}/user/photo/${_id}?${new Date().getTime()}` : DefaultProfile;
+     const photoUrl = _id? `${process.env.REACT_APP_API_URL}/preload/user/photo/${_id}?${new Date().getTime()}` : DefaultProfile;
   
          return (
            <div className="container" style={{color:"white"}}>

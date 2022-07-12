@@ -47,7 +47,7 @@ class Post extends Component {
                 {posts ? posts.map((post, i) => {
                     const posterId = post.postedBy? post.postedBy._id :"../";
                     const posterName = post.postedBy? post.postedBy.name :" Unknown ";
-                    const photoUrl = `${process.env.REACT_APP_API_URL}/post/photo/${post._id}`;
+                    const photoUrl = `${process.env.REACT_APP_API_URL}/preload/post/photo/${post._id}`;
                     let x = Math.round((Math.random())*5);
                     
                     let postx=defaultPost0;

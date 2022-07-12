@@ -67,7 +67,7 @@ class FindPeople extends Component {
         return (
             <div className="flexbox-container row  mt-5 "  style={{display:"flex",justifyContent:"flex-start",marginLeft:"5rem"}} >
                 {users ? users.map((user, i) => {
-                    const photoUrl = `${process.env.REACT_APP_API_URL}/user/photo/${user._id}`;
+                    const photoUrl = `${process.env.REACT_APP_API_URL}/preload/user/photo/${user._id}`;
                    
                     return (
                         <div className="flexbox-item card col-md-4 mb-2 mt-3 hx"
