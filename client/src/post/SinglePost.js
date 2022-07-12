@@ -143,7 +143,7 @@ class SinglePost extends Component {
     renderPost = (post) => {
         const { x, postId,likes } = this.state;
 
-        const photoUrl = `${process.env.REACT_APP_API_URL}/post/photo/${postId}`;
+        const photoUrl = `${process.env.REACT_APP_API_URL}/preload/post/photo/${postId}`;
         const posterId = post.postedBy ? post.postedBy._id : "Unknown";
         const posterName = post.postedBy ? post.postedBy.name : "Unknown";
         let postx = defaultPost0;
