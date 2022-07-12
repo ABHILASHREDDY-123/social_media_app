@@ -19,7 +19,7 @@ exports.signupinit =  (req,res)=>{
           then(async (user1)=>{
            if(user1){ await user1.delete();}
            const ux = await new SignUp({email:req.body.email});
-           const token = jwt.sign({_id:ux._id,iss:"NODEAPI"},process.env.JWT_KEY);
+           const token = jwt.sign({_id:ux._id,iss:"NODEAPI"},process.env.JWT_SECRET);
            ux.signUpLink = token;
            ux.save().then((resp)=>{
             const emailData = {
@@ -137,7 +137,7 @@ exports.signin =  (req,res)=>{
                     return res.status(401).json({error:"Incorrect password"});
                   }
                  // create a jwt token
-                  const token = jwt.sign({_id:user._id},process.env.JWT_KEY);
+                  const token = jwt.sign({_id:user._id},process.env.JWT_SECRET);
                   // create a cookie using above token
                   res.cookie("t",{expires: new Date() + 99999});
                   // return response with  user and jwt token  to client
@@ -167,7 +167,7 @@ exports.forgotPassword = (req,res) =>{
     const user = users[0];
      const token = jwt.sign(
      { _id:user._id,iss:"NODEAPI"},
-     process.env.JWT_KEY
+     process.env.JWT_SECRET
      );
      const emailData = {
       from :"noreply@node-react.com",
