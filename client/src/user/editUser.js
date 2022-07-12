@@ -56,7 +56,7 @@ class EditUser extends Component{
      }
      valid = () =>{
       const {name,password,fileSize} = this.state;   
-      if(fileSize>500000){this.setState({error:"File size should be less than 500kb"});return 0;}
+      if(fileSize>50000){this.setState({error:"File size should be less than 50kb"});return 0;}
       if(name.length === 0){
         this.setState({error:"Name is required"}); return 0;
       }
