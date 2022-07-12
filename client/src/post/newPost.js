@@ -40,9 +40,10 @@ class NewPost extends Component{
       event.preventDefault();
      
      
-      this.setState({loading:true});
+     
        
       if(this.valid()===true){
+        this.setState({loading:true});
       const token = isAuthenticated().token;
       const id = isAuthenticated().user._id;
      create(id,token,this.postData)
