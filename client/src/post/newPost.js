@@ -25,7 +25,7 @@ class NewPost extends Component{
      }
      valid = () =>{
       const {title,body,fileSize} = this.state;   
-      if(fileSize>50000){this.setState({error:"File size should be less than 50kb"});return 0;}
+      if(fileSize>500000){this.setState({error:"File size should be less than 500kb"});return 0;}
       if(title.length === 0){
         this.setState({error:"Title is required",loading:false}); return 0;
       }
