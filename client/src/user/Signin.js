@@ -56,7 +56,7 @@ class Signin extends Component{
  }
   
    signin = (user) =>{
-  return fetch(`${process.env.REACT_APP_API_URL}/signin`,{
+  return fetch(`${process.env.REACT_APP_API_URL}/preload/signin`,{
      method:"POST",
      headers:{
        Accept:"application/json",
