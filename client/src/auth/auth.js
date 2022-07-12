@@ -4,7 +4,7 @@ export const signout = (next) =>{
   
     }
     next();
-    return fetch(`${process.env.REACT_APP_API_URL}/signout`,{
+    return fetch(`${process.env.REACT_APP_API_URL}/preload/signout`,{
       method:"GET"
     })
     .then((res)=>{
@@ -27,7 +27,7 @@ export const signout = (next) =>{
   
   };
   export const signup = (user) =>{
-    return fetch(`${process.env.REACT_APP_API_URL}/signup`,{
+    return fetch(`${process.env.REACT_APP_API_URL}/preload/signup`,{
        method:"POST",
        headers:{
          Accept:"application/json",
@@ -48,7 +48,7 @@ export const signout = (next) =>{
 
    }
 export const forgotPassword = (email) =>{
-    return fetch(`${process.env.REACT_APP_API_URL}/forgot-password`,{
+    return fetch(`${process.env.REACT_APP_API_URL}/preload/forgot-password`,{
        method:"PUT",
        headers:{
         Accept:"Application/json",
@@ -63,7 +63,7 @@ export const forgotPassword = (email) =>{
 }
 export  const resetPassword = (resetPasswordLink,newPassword) =>{
     
-  return fetch(`${process.env.REACT_APP_API_URL}/reset-password`,{
+  return fetch(`${process.env.REACT_APP_API_URL}/preload/reset-password`,{
     method:"PUT",
     headers:{
       Accept:"Application/json",
@@ -78,7 +78,7 @@ export  const resetPassword = (resetPasswordLink,newPassword) =>{
 }
 
 export const signupfirststep = (user) =>{
-  return fetch(`${process.env.REACT_APP_API_URL}/signup-firststep`,{
+  return fetch(`${process.env.REACT_APP_API_URL}/preload/signup-firststep`,{
      method:"POST",
      headers:{
        Accept:"application/json",
@@ -96,7 +96,7 @@ export const signupfirststep = (user) =>{
   }
     
    export const signupcompletionstep = (user) =>{
-    return fetch(`${process.env.REACT_APP_API_URL}/signup-completionstep`,{
+    return fetch(`${process.env.REACT_APP_API_URL}/preload/signup-completionstep`,{
        method:"POST",
        headers:{
          Accept:"application/json",

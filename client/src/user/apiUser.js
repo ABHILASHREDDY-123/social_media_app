@@ -1,5 +1,5 @@
 export const read = (id,token) =>{
-    return  fetch(`${process.env.REACT_APP_API_URL}/user/${id}`,{
+    return  fetch(`${process.env.REACT_APP_API_URL}/preload/user/${id}`,{
          method:"GET",
          headers:{
              Accept:"Application/json",
@@ -12,7 +12,7 @@ export const read = (id,token) =>{
        .catch((err)=>{console.log(err)})
     }
     export const list = () =>{
-        return  fetch(`${process.env.REACT_APP_API_URL}/users/`,{
+        return  fetch(`${process.env.REACT_APP_API_URL}/preload/users/`,{
              method:"GET",
              headers:{
                  Accept:"Application/json"
@@ -27,7 +27,7 @@ export const read = (id,token) =>{
           })
         }
 export const remove = (id,token) =>{
-  return  fetch(`${process.env.REACT_APP_API_URL}/user/${id}`,{
+  return  fetch(`${process.env.REACT_APP_API_URL}/preload/user/${id}`,{
     method:"DELETE",
     headers:{
         Accept:"Application/json",
@@ -46,7 +46,7 @@ export const remove = (id,token) =>{
 
 }
 export const update = (id,token,user) =>{
-   return fetch(`${process.env.REACT_APP_API_URL}/user/${id}`,{
+   return fetch(`${process.env.REACT_APP_API_URL}/preload/user/${id}`,{
           method:"PUT",
           headers:{
             Accept:"application/json",
@@ -65,7 +65,7 @@ export const update = (id,token,user) =>{
 }
 export const follow = (userId,token,followId)=>{
 
-  return fetch(`${process.env.REACT_APP_API_URL}/user/follow`,
+  return fetch(`${process.env.REACT_APP_API_URL}/preload/user/follow`,
        {method:"PUT",
        headers:{
         Accept:"application/json",
@@ -89,7 +89,7 @@ export const follow = (userId,token,followId)=>{
 }
 
 export const unfollow = (userId,token,followId)=>{
-        return fetch(`${process.env.REACT_APP_API_URL}/user/unfollow`,
+        return fetch(`${process.env.REACT_APP_API_URL}/preload/user/unfollow`,
              {method:"PUT",
              headers:{
               Accept:"application/json",
@@ -113,7 +113,7 @@ export const unfollow = (userId,token,followId)=>{
       
       }
 export const findPeople = (userId,token)=>{
-  return fetch(`${process.env.REACT_APP_API_URL}/user/people/${userId}`,
+  return fetch(`${process.env.REACT_APP_API_URL}/preload/user/people/${userId}`,
   { method:"GET",
     headers:{
       Accept:"application/json",

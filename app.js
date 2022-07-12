@@ -36,9 +36,9 @@ app.use(expressValidator());
 
 // routes
 
-app.use("/",postRouter);
-app.use("/",authRouter);
-app.use("/",userRouter);
+app.use("/preload",postRouter);
+app.use("/preload",authRouter);
+app.use("/preload",userRouter);
 app.use(function (err,req,res,next){
     if(err.name === "UnauthorizedError"){
           return res.status(401).json({error:"Unauthorized"});
