@@ -64,6 +64,15 @@ class FindPeople extends Component {
     renderUsers = (users) => {
         const id = isAuthenticated().user._id;
         const token = isAuthenticated().token;
+        if(users===null || (users.length)===0){
+            return (
+                <div className="flexbox-container row  mt-5 "  style={{display:"flex",justifyContent:"flex-start",marginLeft:"5rem"}} >
+                    
+                        <h6>
+                        <u>Hurrah! You follow everyone</u></h6>
+                </div>
+            );
+        }
         return (
             <div className="flexbox-container row  mt-5 "  style={{display:"flex",justifyContent:"flex-start",marginLeft:"5rem"}} >
                 {users ? users.map((user, i) => {
@@ -80,7 +89,7 @@ class FindPeople extends Component {
                             }}>
                                 <img
                                     src={photoUrl}
-                                    style={{ width: "250px",  height: "auto"}}
+                                    style={{ maxWidth: "290px",  maxHeight: "290px", width:"auto",height:"auto"}}
                                     className="card-img-top "
                                     onError={i => i.target.src = `${DefaultProfile}`}
                                     alt={user.name} />
@@ -103,7 +112,8 @@ class FindPeople extends Component {
                     )
                 }
                 )
-                    : <></>}
+                    : <></>
+                }
             </div>
         );
     }

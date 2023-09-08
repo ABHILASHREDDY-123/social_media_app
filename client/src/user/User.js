@@ -53,7 +53,7 @@ class User extends Component {
                             }}>
                                 <img
                                     src={photoUrl}
-                                    style={{ width: "250px",  height: "auto"}}
+                                    style={{ maxWidth: "290px",  maxHeight: "290px", width:"auto",height:"auto"}}
                                     className="card-img-top "
                                     onError={i => i.target.src = `${DefaultProfile}`}
                                     alt={user.name} />

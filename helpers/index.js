@@ -11,7 +11,7 @@ exports.sendEmail = (emailData) =>{
     requireTLS: true,
     auth:{
         user:"mernstack8642@gmail.com",
-        pass:"ncavtywrlessmwiw"
+        pass:"gexrxpzxkdyeoqdo"
     }
 });
     return  transporter.sendMail(emailData)
